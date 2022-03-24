@@ -15,22 +15,19 @@ import java.util.Objects;
 public class Main extends Application {
 
     private final MoviesDAO moviesDAO = new MoviesDAO();
-
+    public static void main(String[] args) {
+        launch(args);
+    }
         @Override
         public void start(Stage stage) throws IOException {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Main.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("../../Main.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 700, 400);
             stage.setTitle("Titel");
             stage.setScene(scene);
             stage.show();
 
-
         //Hämtar alla filmer från databasen
         moviesDAO.readMovies();
-
-        //Lägger till en film i databasen
-        Movies movie = new Movies("Harry Potter", "Fantasy");
-        moviesDAO.createMovie(movie);
 
         //Uppdatera en film
 //        moviesDAO.updateMovie(1, "Harry Potter", "Magi");
@@ -43,7 +40,4 @@ public class Main extends Application {
         moviesDAO.readMovies();
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
