@@ -5,6 +5,7 @@ import com.group6.movies.MoviesDAO;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+
 public class Main extends Application {
 
     private final MoviesDAO moviesDAO = new MoviesDAO();
