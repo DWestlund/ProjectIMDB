@@ -6,12 +6,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group6.gui.MainController">
    <children>
       <ListView fx:id="lw_film" layoutX="258.0" layoutY="43.0" prefHeight="336.0" prefWidth="310.0" />
       <Button layoutX="35.0" layoutY="211.0" mnemonicParsing="false" text="Update" />
-      <Button layoutX="35.0" layoutY="175.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="btn_read" layoutX="35.0" layoutY="175.0" mnemonicParsing="false" text="Read" />
       <Button layoutX="35.0" layoutY="96.0" mnemonicParsing="false" text="Button" />
       <Button layoutX="35.0" layoutY="247.0" mnemonicParsing="false" text="Delete" />
       <Label layoutX="33.0" layoutY="38.0" text="Label" />
