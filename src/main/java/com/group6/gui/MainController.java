@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
 public class MainController {
 
@@ -24,7 +25,28 @@ public class MainController {
 
     @FXML
     private ComboBox<Users> cb_user;
+    @FXML
+    private TextField tf;
 
+    public TextField getTf() {
+        return tf;
+    }
+
+    public ListView<Movies> getLw_film() {
+        return lw_film;
+    }
+
+    public ObservableList<Movies> getMovieList() {
+        return movieList;
+    }
+
+    public ObservableList<Users> getUserList() {
+        return userList;
+    }
+
+    public ComboBox<Users> getCb_user() {
+        return cb_user;
+    }
 
     public Button getBtn_read() {
         return btn_read;

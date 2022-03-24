@@ -1,5 +1,7 @@
 package com.group6.ratings;
 
+import com.group6.movies.Movies;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -61,4 +63,24 @@ public class RatingsDAO {
         return null;
     }
 
+    public void createRatin(Ratings ratings){
+        EntityManager entityManager = EMF.createEntityManager();
+        transaction = null;
+        try {
+            transaction = entityManager.getTransaction();
+            transaction.begin();
+
+
+            entityManager.persist(ratings);
+
+
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null)
+                transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
+    }
 }
