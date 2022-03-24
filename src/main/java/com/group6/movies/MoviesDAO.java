@@ -27,7 +27,6 @@ public class MoviesDAO {
         } finally {
             entityManager.close();
         }
-
     }
 
     public Collection<Movies> readMovies(){
