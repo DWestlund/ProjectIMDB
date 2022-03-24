@@ -29,6 +29,7 @@ hs_err_pid*
 
 # Own Simple Solution
 .idea
+target
 
 # User-specific stuff
 .idea/**/workspace.xml
