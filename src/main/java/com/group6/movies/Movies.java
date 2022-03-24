@@ -1,6 +1,14 @@
 package com.group6.movies;
 
-import javax.persistence.*;
+import com.group6.ratings.Ratings;
+import com.group6.ratings.RatingsDAO;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -16,10 +24,9 @@ public class Movies {
     @Column(name = "category")
     private String category;
 
-    public Movies(String title, String category){
-        this.title = title;
-        this.category = category;
-    }
+    @Column(name = "avgRating")
+    private double avgRating = 0;
+
     public Movies() {}
 
     public int getMovieId() {
@@ -44,6 +51,30 @@ public class Movies {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public double getAvgRating() {
+        return avgRating;
+    }
+
+    public void setAvgRating(double avgRating) {
+        RatingsDAO ratingsDAO = new RatingsDAO();
+        Collection<Integer> ratings = new ArrayList<>();
+
+        for (Ratings r : ratingsDAO.readRatings(movieId)){
+            ratings.add(r.getRating());
+        }
+
+        avgRating = 0;
+        for (Integer num : ratings) {
+            avgRating += num;
+            System.out.println(num);
+        }
+        avgRating = avgRating / ratings.size();
+
+
+
+        this.avgRating = avgRating;
     }
 
     @Override

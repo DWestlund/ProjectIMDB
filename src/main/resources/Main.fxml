@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group6.gui.MainController">
+<AnchorPane prefHeight="482.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group6.gui.MainController">
    <children>
-      <ListView fx:id="lw_film" layoutX="258.0" layoutY="43.0" prefHeight="336.0" prefWidth="310.0" />
+      <ListView fx:id="lw_film" layoutX="430.0" layoutY="43.0" prefHeight="336.0" prefWidth="310.0" />
       <Button layoutX="35.0" layoutY="211.0" mnemonicParsing="false" text="Update" />
       <Button fx:id="btn_read" layoutX="35.0" layoutY="175.0" mnemonicParsing="false" text="Read" />
       <Button layoutX="35.0" layoutY="96.0" mnemonicParsing="false" text="Button" />
       <Button layoutX="35.0" layoutY="247.0" mnemonicParsing="false" text="Delete" />
-      <Label layoutX="33.0" layoutY="38.0" text="Label" />
+      <Label layoutX="33.0" layoutY="38.0" text="Rating" />
       <TextField layoutX="33.0" layoutY="64.0" />
+      <ComboBox fx:id="cb_user" layoutX="215.0" layoutY="64.0" prefWidth="150.0" />
+      <Label layoutX="215.0" layoutY="38.0" text="User" />
    </children>
 </AnchorPane>

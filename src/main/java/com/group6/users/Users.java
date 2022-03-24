@@ -1,6 +1,9 @@
 package com.group6.users;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
@@ -51,5 +54,10 @@ public class Users {
     @Override
     public int hashCode() {
         return Objects.hash(userId, userName, aPassWord);
+    }
+
+    @Override
+    public String toString() {
+        return userName;
     }
 }
